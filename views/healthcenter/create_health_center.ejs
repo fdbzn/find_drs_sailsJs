@@ -1,0 +1,115 @@
+<div id="container_expirience" class="col-xs-12 col-sm-offset-3 col-sm-6">
+    <div id="contaier_pages" class="carousel slide" data-ride="carousel" data-interval="false">
+
+        <div class="carousel-inner">
+            <div id="container_gral_data" class="item active">
+                <div id="txt_intro_recomm" class="text-center">
+                  Haz una recomendación y comparte tu experiencia.
+                </div>
+                <form id="f_location_center">
+                    <div class="form-group">
+                        <button type="button" id="btn_select_location" class="btn btn-primary  btn-block">
+                            Indica una Dirección de Atención
+                            <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                        </button>
+
+                        <div id="hc_address"></div>
+                    </div>
+
+                    <div id="container_hc_name">
+                        <div class="form-group">
+                            <label for="hc_name">Nombre centro de salud</label>
+                            <input type="text" id="hc_name" name="hc_name"  class="form-control">
+                        </div>
+                    </div>
+
+                    <div id="container_doctor_name">
+                        <div class="form-group">
+                            <div id="block_sex_doc">
+                                <label for="sex_dr">Dr.</label>
+                                <input type="radio" value="1" name="sex_doc" id="sex_dr" >
+                                <label for="sex_dra">Dra.</label>
+                                <input type="radio" value="2" name="sex_doc" id="sex_dra" >
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="container_autocomplete_nombre_doc" class="col-xs-12">
+                                <input type="text" name="nombre_medico" id="nombre_medico" class="form-control" placeholder="Nombre(s)"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="container_autocomplete_apellido_doc" class="col-xs-12">
+                                <input type="text" name="apellido_medico" id="apellido_medico" class="form-control" placeholder="Apellido(s)"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="container_tipo_consulta">
+                        <label for="specialty_name">Tipo de consulta</label>
+                        <select name="createhc_specialty" id="createhc_specialty" class="form-control">
+                            <option value="0"></option>
+                            <option value="1">General</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user_comment_doc">Cuentanos ¿Cómo te fue en tu consulta?</label>
+                        <input type="text" id="user_comment_doc" name="user_comment_doc" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" id="direccion_extra_hc" name="direccion_extra_hc" value="">
+                        <input type="hidden" id="hc_id" name="hc_id" value="">
+                        <input type="hidden" id="doctor_id" name="doctor_id" value="">
+                        <input type="hidden" id="place_hc" name="place_hc" value="">
+                        <button type="button" id="btn_save_hc" class="btn btn-primary  btn-block" >
+                            Guardar
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div id="container_map" class="item">
+                <div id="container_address" >
+                    <button id="btn_search_address" type="button" class="btn btn-default col-xs-3 hide">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                    <div class="error-container hide" id="error_map_create_hc"></div>
+                    <input id="pac-input" class="controls form-control" type="text" placeholder="Escribe una direción">
+                    <div id="data_address" class="col-xs-9 hide">
+                        <div id="new_formatted_address"></div>
+                        <div class="field" id="container_extra">
+                            <label for="extra">Dirección adicional (opcional)</label>
+                            <input name="extra" id="extra" class="form-control" placeholder="No. interior, Piso, Edificio">
+                        </div>
+                    </div>
+                    <button type="button" id="btn_sig" class="btn btn-success  btn-block hide">
+                        Agregar
+                        <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                    </button>
+
+                    <div id="txt_drag_pin" class="hide">
+                      <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                      Arrastra el pin si necesitas ajustar la dirección.
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="hc_doc_finish_modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="loader"></div>
+        </div>
+    </div>
+</div>

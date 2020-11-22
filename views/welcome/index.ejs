@@ -1,0 +1,89 @@
+<div id="contaier_pages" class="carousel slide" data-ride="carousel" data-interval="false" data-interval="100">
+
+	<div id="menu-recomendar" class="col-xs-12 text-right pull-right">
+		<a href="/recomendacion">
+			Recomendar nuevo médico
+			<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+		</a>
+	</div>
+
+	<div class="carousel-inner">
+
+		<div id="container_gral_data" class="item active">
+
+			<div id="block_set_options" class="col-xs-12 ">
+				<button class="btn btn_my_location col-xs-6">
+					<i class="fa fa-location-arrow" aria-hidden="true"></i>
+					Mi Ubicación
+				</button>
+				<button class="btn btn_specialty col-xs-6">
+					<span id="specialty_name">Medico General</span>
+					<i class="fa fa-plus-square" style="color:red"></i>
+				</button>
+			</div>
+			<div id="block_change_addr" class="col-xs-12" style="display: none">
+				<button  id="btn_ch_location" data-is-active="0" class="btn">
+					<i class="fa fa-location-arrow" aria-hidden="true"></i>
+					Cambiar ubicación
+				</button>
+
+
+			</div>
+			<div id="block_set_address" class="col-xs-12 no-padding no-padding" style="display: none">
+				<div class="col-xs-12 container_input_serach_map">
+						<input id="pac-input" class="controls form-control" type="text" placeholder="Escribe una nueva dirección">
+				</div>
+				<div class="clear_btn_search">
+						<i class="fa fa-times" aria-hidden="true"></i>
+				</div>
+				<div id="data_address" class="col-xs-12">
+					<div class="field g-adr" id="street_number" ></div>
+					<div class="field g-adr" id="route" ></div>
+					<div class="field g-adr" id="locality" ></div></td>
+					<div class="field g-adr" id="administrative_area_level_1" ></div>
+					<div class="field g-adr" id="postal_code" ></div>
+					<div class="field g-adr" id="country" ></div>
+				</div>
+			</div>
+
+
+			<div id="container_search_map" class="col-xs-12">
+				<div id="search_map"></div>
+			</div>
+
+			<div class="container-error-search_map col-xs-12">
+				<div id="error_msg_search_map"></div>
+			</div>
+
+			<div id="containerListHC" class="col-xs-12  no-padding">
+				<ul id="l_hcenter">
+
+				</ul>
+			</div>
+		</div>
+
+		<div id="container_doctor_list" class="item">
+		  vacio...
+
+		</div>
+
+	</div>
+</div>
+
+
+<!-- pop specialties -->
+<div class="bg_overlay" style="display:none" id="bg_overlay_specialties">
+    <div id="btn_close_specialties" class="btn_close_overlay">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div id="container_checks_specialties" class="content_overlay col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+        <ul id="container_specialties">
+            <li>
+                <input type="radio" id="specialty_0" name="doc_specialty" value="0"/>
+                <label for="specialty_0">Medico General</label>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- end pop specialties -->
